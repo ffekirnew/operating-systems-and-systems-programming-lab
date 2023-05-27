@@ -1,96 +1,176 @@
-# Basic Commands
-1. `mkdir`:
+    mkdir:
+        Definition: Used to create a new directory.
+        Basic Parameters:
+            -p: Creates nested folders.
+        Example Usage:
+            mkdir os/new-folder
 
-   - Definition: Used to create a new directory.
-   - Basic Parameters:
-     - `-p`: Creates nested folders.
-   - Example Usage:
-     - `mkdir os/new-folder`
+    cd:
+        Definition: Used to change the current working directory.
+        Basic Parameters:
+            <directory>: Specifies the directory to change to.
+            ..: Moves to the parent directory.
+            ~: Moves to the home directory.
+        Example Usage:
+            cd documents
+            cd ..
+            cd ~/downloads
 
-2. `cd`:
+    pwd:
+        Definition: Displays the current working directory.
+        Example Usage:
+            pwd
 
-   - Definition: Used to change the current directory.
-   - Basic Parameters:
-     - `.`: Refers to the current directory.
-     - `..`: Refers to the parent directory.
-     - `-`: Refers to the previous directory.
-   - Example Usage:
-     - `cd /home/user/documents/`: Changes the current directory to "/home/user/documents".
-     - `cd ..`: Changes the current directory to the parent directory.
-     - `cd -`: Changes the current directory to the previous directory.
+    rmdir:
+        Definition: Used to remove an empty directory.
+        Example Usage:
+            rmdir empty-folder
 
-3. `pwd`:
+    rm:
+        Definition: Used to remove files and directories.
+        Basic Parameters:
+            -r: Recursively removes directories and their contents.
+            -f: Forces removal without prompting for confirmation.
+        Example Usage:
+            rm file.txt
+            rm -r directory
+            rm -rf directory
 
-   - Definition: Used to print the current working directory.
-   - Basic Parameters: None
-   - Example Usage:
-     - `pwd`: Prints the current working directory.
+    ls:
+        Definition: Lists files and directories in the current directory.
+        Basic Parameters:
+            -l: Displays detailed information.
+            -a: Shows hidden files.
+        Example Usage:
+            ls
+            ls -l
+            ls -a
 
-4. `rmdir`:
+    cat:
+        Definition: Displays the contents of a file.
+        Example Usage:
+            cat file.txt
 
-   - Definition: Used to remove an empty directory.
-   - Basic Parameters:
-     - `-p`: Removes nested directories.
-   - Example Usage:
-     - `rmdir os/new-folder`: Removes the directory "new-folder" inside the "os" directory.
-     - `rmdir -p os/`: Removes the "os" directory and all its contents.
+    cp:
+        Definition: Copies files and directories.
+        Basic Parameters:
+            <source>: Specifies the source file or directory.
+            <destination>: Specifies the destination directory.
+        Example Usage:
+            cp file.txt new-folder
+            cp -r directory/ destination/
 
-5. `rm`:
+    mv:
+        Definition: Moves or renames files and directories.
+        Basic Parameters:
+            <source>: Specifies the source file or directory.
+            <destination>: Specifies the destination directory or new name.
+        Example Usage:
+            mv file.txt new-folder
+            mv directory/ new-location/
 
-   - Definition: Used to remove files and directories.
-   - Basic Parameters:
-     - `-r`: Removes directories and their contents recursively.
-     - `-f`: Removes files without prompting for confirmation.
-   - Example Usage:
-     - `rm file.txt`: Removes the file "file.txt".
-     - `rm -r os/`: Removes the directory "os" and all its contents.
-     - `rm -f file.txt`: Removes the file "file.txt" without confirmation.
+    tail:
+        Definition: Displays the last part of a file.
+        Basic Parameters:
+            -n: Specifies the number of lines to display.
+        Example Usage:
+            tail file.txt
+            tail -n 10 file.txt
 
-6. `ls`:
+    more:
+        Definition: Displays the contents of a file one page at a time.
+        Example Usage:
+            more file.txt
 
-   - Definition: Used to list the contents of a directory.
-   - Basic Parameters:
-     - `-a`: Shows hidden files.
-     - `-l`: Shows detailed information about each file.
-     - `-h`: Shows file sizes in human-readable format.
-   - Example Usage:
-     - `ls`: Lists the contents of the current directory.
-     - `ls -a`: Lists all the contents of the current directory, including hidden files.
-     - `ls -l -h`: Lists the contents of the current directory with detailed information and human-readable file sizes.
+    less:
+        Definition: Displays the contents of a file with backward navigation support.
+        Example Usage:
+            less file.txt
 
-7. `cat`:
+    who:
+        Definition: Displays the currently logged-in users.
+        Example Usage:
+            who
 
-   - Definition: Used to display the contents of a file.
-   - Basic Parameters: None
-   - Example Usage:
-     - `cat file.txt`: Displays the contents of the file "file.txt".
+    passwd:
+        Definition: Used to change the password for a user account.
+        Example Usage:
+            passwd
 
-8. `cp`:
+    date:
+        Definition: Displays the current date and time.
+        Example Usage:
+            date
 
-   - Definition: Used to copy files and directories.
-   - Basic Parameters:
-     - `-r`: Copies directories and their contents recursively.
-     - `-f`: Overwrites the destination file without prompting for confirmation.
-   - Example Usage:
-     - `cp file.txt new-file.txt`: Copies the file "file.txt" and renames it to "new-file.txt".
-     - `cp -r os/ os-backup/`: Copies the directory "os" and all its contents to "os-backup".
-     - `cp -f file.txt backup/`: Copies the file "file.txt" to the "backup" directory, overwriting any existing file with the same name.
+    df:
+        Definition: Displays information about disk space usage.
+        Example Usage:
+            df
 
-9. `mv`:
-   - Definition: Used to move or rename files and directories.
-   - Basic Parameters: None
-   - Example Usage:
-     - `mv file.txt new-file.txt`: Renames the file "file.txt" to "new-file.txt".
-     - `mv file.txt documents/`: Moves the file "file.txt" to the "documents" directory.
-     - `mv os/ os-backup/`: Renames the directory "os" to "os-backup".
+    clear:
+        Definition: Clears the terminal screen.
+        Example Usage:
+            clear
 
-10. `tail`:
+    exit:
+        Definition: Exits the current shell or terminal session.
+        Example Usage:
+            exit
 
-  - Definition: Used to display the last few lines of a file.
-  - Basic Parameters:
-    - `-f`: Follows the end of the file and displays any new content that gets added.
-    - `-n`: Specifies the number of lines to display.
-  - Example Usage:
-    - `tail file.txt`: Displays the last 10 lines of the file "file.txt".
-    - `tail -n 5 file.txt`: Displays the last 5 lines of the file "file.txt".
-    - `tail -f file.txt`: Displays the last few lines of the file "file.txt" and following any new content that gets added to the file.
+    nano:
+        Definition: Opens the nano text editor.
+        Basic Usage:
+            nano file.txt
+
+    hostname:
+        Definition: Displays the name of the current host or sets the hostname.
+        Example Usage:
+            hostname
+
+    uname:
+        Definition: Displays system information.
+        Example Usage:
+            uname -a
+
+    ps:
+        Definition: Displays information about running processes.
+        Basic Parameters:
+            -e: Displays information about all processes.
+        Example Usage:
+            ps
+            ps -e
+
+    ip:
+        Definition: Displays network configuration information.
+        Example Usage:
+            ip address
+
+    ping:
+        Definition: Sends ICMP Echo Request packets to a network host.
+        Example Usage:
+            ping google.com
+
+    lshw:
+        Definition: Displays detailed information about the hardware configuration.
+        Example Usage:
+            lshw
+
+    lscpu:
+        Definition: Displays information about the CPU architecture and processing units.
+        Example Usage:
+            lscpu
+
+    lsmem:
+        Definition: Displays information about the memory configuration.
+        Example Usage:
+            lsmem
+
+    lspci:
+        Definition: Displays information about PCI devices.
+        Example Usage:
+            lspci
+
+    lsmod:
+        Definition: Displays the status of loaded kernel modules.
+        Example Usage:
+            lsmod
